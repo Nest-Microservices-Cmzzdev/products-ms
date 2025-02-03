@@ -67,11 +67,12 @@ export class ProductsService extends PrismaClient implements OnModuleInit {
     });
     */
     /* Soft delete */
-    await this.product.update({
+    const product = await this.product.update({
       where: { id },
       data: {
         available: false,
       },
     });
+    return product;
   }
 }
