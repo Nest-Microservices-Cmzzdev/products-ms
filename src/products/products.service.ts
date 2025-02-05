@@ -4,7 +4,6 @@ import { UpdateProductDto } from './dto/update-product.dto';
 import { PrismaClient } from '@prisma/client';
 import { PaginationDto } from 'src/common';
 import { RpcException } from '@nestjs/microservices';
-import { STATUS_CODES } from 'node:http';
 
 @Injectable()
 export class ProductsService extends PrismaClient implements OnModuleInit {
